@@ -39,11 +39,11 @@ public class MainMemory extends AbstractMainMemory {
    * @return Big Endian integer formed by these four bytes.
    */
   @Override public int bytesToInteger (byte byteAtAddrPlus0, byte byteAtAddrPlus1, byte byteAtAddrPlus2, byte byteAtAddrPlus3) {
-	  int val =(((int) byteAtAddrPlus0) & 0xff) << 24 |
+
+	  return (((int) byteAtAddrPlus0) & 0xff) << 24 |
 	           (((int) byteAtAddrPlus1) & 0xff) << 16 |
 	           (((int) byteAtAddrPlus2) & 0xff) <<  8 |
 	           (((int) byteAtAddrPlus3) & 0xff);
-	  return val;
   }
   
   /**
